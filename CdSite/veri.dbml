@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CdSite" Class="veriDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-9J26705;Initial Catalog=CdSite;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CdSiteConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.dt_film" Member="dt_films">
+    <Type Name="dt_film">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="yapimYil" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="yapimci" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="sure" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="barkod" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="adet" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="fiyat" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="filmTur_id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="dt_film_tx_sati" Member="tx_satis" ThisKey="id" OtherKey="film_id" Type="tx_sati" />
+      <Association Name="lu_filmTur_dt_film" Member="lu_filmTur" ThisKey="filmTur_id" OtherKey="id" Type="lu_filmTur" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_kullanici" Member="dt_kullanicis">
+    <Type Name="dt_kullanici">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="soyad" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="tcNo" Type="System.Decimal" DbType="Decimal(11,0) NOT NULL" CanBeNull="false" />
+      <Column Name="dogumTarih" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="eposta" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="sifre" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="yetki" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="dt_kullanici_tx_filmKira" Member="tx_filmKiras" ThisKey="id" OtherKey="kullanici_id" Type="tx_filmKira" />
+      <Association Name="dt_kullanici_tx_sati" Member="tx_satis" ThisKey="id" OtherKey="kullanici_id" Type="tx_sati" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_muzik" Member="dt_muziks">
+    <Type Name="dt_muzik">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="sanatci" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="album" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="sure" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="yapimYil" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="adet" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="fiyat" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="barkod" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="muzikTur_id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="dt_muzik_tx_sati" Member="tx_satis" ThisKey="id" OtherKey="muzik_id" Type="tx_sati" />
+      <Association Name="lu_muzikTur_dt_muzik" Member="lu_muzikTur" ThisKey="muzikTur_id" OtherKey="id" Type="lu_muzikTur" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dt_oyun" Member="dt_oyuns">
+    <Type Name="dt_oyun">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="yapimYil" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="yapimci" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="platform" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="barkod" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="adet" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="fiyat" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="oyunTur_id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="dt_oyun_tx_sati" Member="tx_satis" ThisKey="id" OtherKey="oyun_id" Type="tx_sati" />
+      <Association Name="lu_oyunTur_dt_oyun" Member="lu_oyunTur" ThisKey="oyunTur_id" OtherKey="id" Type="lu_oyunTur" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lu_filmTur" Member="lu_filmTurs">
+    <Type Name="lu_filmTur">
+      <Column Name="id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="lu_filmTur_dt_film" Member="dt_films" ThisKey="id" OtherKey="filmTur_id" Type="dt_film" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lu_oyunTur" Member="lu_oyunTurs">
+    <Type Name="lu_oyunTur">
+      <Column Name="id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="lu_oyunTur_dt_oyun" Member="dt_oyuns" ThisKey="id" OtherKey="oyunTur_id" Type="dt_oyun" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tx_filmKira" Member="tx_filmKiras">
+    <Type Name="tx_filmKira">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="kullanici_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="film_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="adet" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ucret" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="alinanTarih" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="iadeTarih" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="teslimTarih" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="dt_kullanici_tx_filmKira" Member="dt_kullanici" ThisKey="kullanici_id" OtherKey="id" Type="dt_kullanici" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tx_satis" Member="tx_satis">
+    <Type Name="tx_sati">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="film_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="muzik_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="oyun_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kullanici_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tarih" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="adet" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ucret" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="dt_film_tx_sati" Member="dt_film" ThisKey="film_id" OtherKey="id" Type="dt_film" IsForeignKey="true" />
+      <Association Name="dt_kullanici_tx_sati" Member="dt_kullanici" ThisKey="kullanici_id" OtherKey="id" Type="dt_kullanici" IsForeignKey="true" />
+      <Association Name="dt_muzik_tx_sati" Member="dt_muzik" ThisKey="muzik_id" OtherKey="id" Type="dt_muzik" IsForeignKey="true" />
+      <Association Name="dt_oyun_tx_sati" Member="dt_oyun" ThisKey="oyun_id" OtherKey="id" Type="dt_oyun" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lu_muzikTur" Member="lu_muzikTurs">
+    <Type Name="lu_muzikTur">
+      <Column Name="id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="lu_muzikTur_dt_muzik" Member="dt_muziks" ThisKey="id" OtherKey="muzikTur_id" Type="dt_muzik" />
+    </Type>
+  </Table>
+</Database>

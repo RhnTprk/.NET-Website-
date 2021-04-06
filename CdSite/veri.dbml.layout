@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 8.5" name="veri">
+  <DataContextMoniker Name="/veriDataContext" />
+  <nestedChildShapes>
+    <classShape Id="781acd28-afcc-48bd-b427-248dcc795688" isExpanded="false" absoluteBounds="3.875, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/veriDataContext/dt_film" />
+      <nestedChildShapes>
+        <elementListCompartment Id="017d498a-f42d-4907-b12d-b6a1ae48763f" absoluteBounds="3.89, 1.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9defc9b2-b028-4ac4-b8ad-4266e2fe5685" isExpanded="false" absoluteBounds="9.125, 1, 2, 0.45">
+      <DataClassMoniker Name="/veriDataContext/dt_kullanici" />
+      <nestedChildShapes>
+        <elementListCompartment Id="461e290e-de2f-439e-bcb5-7c7c1f84f30c" absoluteBounds="9.14, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae2b34a8-879b-450d-ae2f-ff0f0aef1974" isExpanded="false" absoluteBounds="1.25, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/veriDataContext/dt_muzik" />
+      <nestedChildShapes>
+        <elementListCompartment Id="111efc77-c564-41a9-8fc9-44fe4bc13b59" absoluteBounds="1.2650000000000001, 1.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02253ec8-d7c2-4699-b10b-9ea2ecf12514" isExpanded="false" absoluteBounds="6.125, 0.875, 2, 0.45">
+      <DataClassMoniker Name="/veriDataContext/dt_oyun" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72430235-6b47-491c-97a4-d921d53008ed" absoluteBounds="6.1400000000000006, 1.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69782fbe-b59f-426c-984c-58c78c53d7f0" isExpanded="false" absoluteBounds="4.625, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/veriDataContext/lu_filmTur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2b648a4-c15c-4d50-81e9-1654b9ad52a2" absoluteBounds="4.64, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 2.75); (5.25 : 1.075)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veriDataContext/lu_filmTur/lu_filmTur_dt_film" />
+      <nodes>
+        <classShapeMoniker Id="69782fbe-b59f-426c-984c-58c78c53d7f0" />
+        <classShapeMoniker Id="781acd28-afcc-48bd-b427-248dcc795688" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c64a995c-15cd-42e2-9e43-948950fb79a3" isExpanded="false" absoluteBounds="7.25, 2.75, 2, 0.45">
+      <DataClassMoniker Name="/veriDataContext/lu_oyunTur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad6f3301-581f-4986-b28c-4af98b54b1c8" absoluteBounds="7.2650000000000006, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.6875 : 2.75); (7.6875 : 1.325)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veriDataContext/lu_oyunTur/lu_oyunTur_dt_oyun" />
+      <nodes>
+        <classShapeMoniker Id="c64a995c-15cd-42e2-9e43-948950fb79a3" />
+        <classShapeMoniker Id="02253ec8-d7c2-4699-b10b-9ea2ecf12514" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a06a8e3b-83ea-4040-bada-db15d9caa619" isExpanded="false" absoluteBounds="3.125, 4.875, 2, 0.45">
+      <DataClassMoniker Name="/veriDataContext/tx_filmKira" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6cada27-845b-43a7-b363-3a3fa1d1bb7d" absoluteBounds="3.1399999999999997, 5.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.21875 : 1.45); (10.21875 : 5.29375); (5.125 : 5.29375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veriDataContext/dt_kullanici/dt_kullanici_tx_filmKira" />
+      <nodes>
+        <classShapeMoniker Id="9defc9b2-b028-4ac4-b8ad-4266e2fe5685" />
+        <classShapeMoniker Id="a06a8e3b-83ea-4040-bada-db15d9caa619" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="956d7814-1b0b-490a-aefd-fc0c3c48d78e" isExpanded="false" absoluteBounds="6.25, 4.75, 2, 0.45">
+      <DataClassMoniker Name="/veriDataContext/tx_sati" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45123bb5-488f-46b3-bc00-6cbc3f8e90dc" absoluteBounds="6.2650000000000006, 5.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.531248 : 1.075); (4.531248 : 2.5); (5.16666666666667 : 2.5 : JumpStart); (5.33333333333333 : 2.5 : JumpEnd); (6.875 : 2.5); (6.875 : 4.5); (6 : 4.5); (6 : 4.975); (6.25 : 4.975)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veriDataContext/dt_film/dt_film_tx_sati" />
+      <nodes>
+        <classShapeMoniker Id="781acd28-afcc-48bd-b427-248dcc795688" />
+        <classShapeMoniker Id="956d7814-1b0b-490a-aefd-fc0c3c48d78e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.7343725 : 1.45); (9.7343725 : 4.975); (8.25 : 4.975)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veriDataContext/dt_kullanici/dt_kullanici_tx_sati" />
+      <nodes>
+        <classShapeMoniker Id="9defc9b2-b028-4ac4-b8ad-4266e2fe5685" />
+        <classShapeMoniker Id="956d7814-1b0b-490a-aefd-fc0c3c48d78e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.46875 : 1.075); (1.46875 : 4.78125); (5.91666666666667 : 4.78125 : JumpStart); (6.08333333333333 : 4.78125 : JumpEnd); (6.25 : 4.78125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veriDataContext/dt_muzik/dt_muzik_tx_sati" />
+      <nodes>
+        <classShapeMoniker Id="ae2b34a8-879b-450d-ae2f-ff0f0aef1974" />
+        <classShapeMoniker Id="956d7814-1b0b-490a-aefd-fc0c3c48d78e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.09375 : 1.325); (7.09375 : 4.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veriDataContext/dt_oyun/dt_oyun_tx_sati" />
+      <nodes>
+        <classShapeMoniker Id="02253ec8-d7c2-4699-b10b-9ea2ecf12514" />
+        <classShapeMoniker Id="956d7814-1b0b-490a-aefd-fc0c3c48d78e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="de28716e-c860-42b9-9271-f036b0d3a8c1" isExpanded="false" absoluteBounds="1.75, 2.875, 2, 0.45">
+      <DataClassMoniker Name="/veriDataContext/lu_muzikTur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df1a5393-a2db-4134-a891-2b7c2673c6ab" absoluteBounds="1.7649999999999997, 3.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 2.875); (2.5 : 1.075)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/veriDataContext/lu_muzikTur/lu_muzikTur_dt_muzik" />
+      <nodes>
+        <classShapeMoniker Id="de28716e-c860-42b9-9271-f036b0d3a8c1" />
+        <classShapeMoniker Id="ae2b34a8-879b-450d-ae2f-ff0f0aef1974" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

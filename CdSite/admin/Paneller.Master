@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/admin/Paneller.Master.cs" Inherits="CdSite.Paneller" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" style="background-image: url(../images/1080.jpg); height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <div style="height: 812px">
+            <div style="height: 811px;">
+                <div style="border-style: outset; border-width: medium; margin-left: 250px; height: 200px; width: 1100px; margin-top: 71px;">
+                    <div style="margin-left: 500px; margin-top: 90px; height: 24px; width: 193px; font-weight: 700;">
+                        <strong>CD-DVD SATIŞ SİTESİ</strong>
+                    </div>
+                </div>
+                <div style="border-style: outset; border-width: medium; margin-left: 250px; height: 250px; width: 137px; margin-top: 20px;">
+                    <asp:Label ID="lbl_filmler" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000" Text="Filmler"><a href="film.aspx">Filmler</a></asp:Label>
+                    <br />
+                    <asp:Label ID="lbl_muzikler" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000" Text="Müzikler"><a href="muzik.aspx">Müzikler</a></asp:Label>
+                    <br />
+                    <asp:Label ID="lbl_oyunlar" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000" Text="Oyunlar"><a href="oyun.aspx">Oyunlar</a></asp:Label>
+                    <br />
+                    <asp:Label ID="lbl_kiralama" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000" Text="&lt;a href=&quot;kirala.aspx&quot;&gt;Kiralama&lt;/a&gt;"></asp:Label>
+                    <br />
+                    <asp:Label ID="lbl_satis" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000" Text="&lt;a href=&quot;satis.aspx&quot;&gt;Satış&lt;/a&gt;"></asp:Label>
+                    <br />
+                    <asp:Label ID="lbl_satisListe" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000; font-size: x-large;" Text="&lt;a href=&quot;sAlanlar.aspx&quot;&gt;Satış Listesi&lt;/a&gt;"></asp:Label>
+                </div>
+                <div style="border-style: outset; border-width: medium; margin-left: 1180px; height: 250px; width: 170px; margin-top: -255px;">
+                    <asp:Label ID="lbl_kullanicilar" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000" Text="&lt;a href=&quot;kullanicilar.aspx&quot;&gt;Kullanıcılar&lt;/a&gt;"></asp:Label>
+                    <br />
+                    <asp:Label ID="lbl_kGuncelle" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000; font-size: xx-large;" Text="&lt;a href=&quot;kGuncelle.aspx&quot;&gt;K. Güncelle&lt;/a&gt;"></asp:Label>
+                    <br />
+                    <asp:Label ID="lbl_kullaniciEkle" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000" Text="&lt;a href=&quot;kullaniciEkle.aspx&quot;&gt;K. Ekle&lt;/a&gt;"></asp:Label>
+                    <br />
+                    <asp:Label ID="lbl_uyeSil" runat="server" Font-Size="XX-Large" Style="text-align: center; color: #FF0000" Text="Üye Sil"><a href="uyeSil.aspx">Üye Sil</a></asp:Label>
+                    <br />
+                    <asp:LinkButton ID="LinkButton1" runat="server" Font-Size="X-Large" ForeColor="#CC0000" OnClick="LinkButton1_Click">ÇIKIŞ</asp:LinkButton>
+                </div>
+                <div style="border-style: outset; border-width: medium; margin-left: 413px; height: 579px; width: 744px; margin-top: -260px; overflow-y: scroll;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<!--<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>-->
+
